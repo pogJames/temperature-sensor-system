@@ -1,5 +1,5 @@
 # TEMPERATURE-SENSOR-SYSTEM
-A complete implementation of Modbus RTU communication between two Arduino UNO boards for remote temperature monitoring over RS485. The master Arduino reads temperature data from a slave Arduino equipped with a temperature sensor.
+A complete implementation of Modbus RTU communication between two Arduino UNO boards for remote temperature monitoring over RS-485. The master Arduino reads temperature data from a slave Arduino equipped with a temperature sensor.
 
 ## RS-485
 It's a physical wiring standard, using electrical connections: D+/A and D-/B
@@ -11,12 +11,10 @@ It's a physical wiring standard, using electrical connections: D+/A and D-/B
 It's a client/server data communication protocol in the application layer
 > like the words spoken during a call
 
-### Input Registers
-**Purpose**: read-only data<br>
+**Input Registers**: read-only data
 > usually sensor data, like current temperature value or current humidity value
 
-### Holding Registers
-**Purpose**: Read and write data
+**Holding Registers**: Read and write data
 > like a notebook, maybe to set a target temperature or to write a configuration value for a sensor
 
 ### Slave ID
