@@ -17,14 +17,20 @@ It's a client/server data communication protocol in the application layer
 **Holding Registers**: Read and write data
 > like a notebook, maybe to set a target temperature or to write a configuration value for a sensor
 
-### Slave ID
+### 1. Slave ID
 pretty self-explanatory
 
-### Baud Rate
+### 2. Baud Rate
 It's the speed at which two devices talk to each other, both devices **must use the same baud rate**, or the data becomes unreadable
 > like talking speed; if you speak too fast, I can't keep up; If I talk too slow while you talk fast, we can't understand each other
 
-### Parity Bit
+### 3. Data bit
+Length of actual information, if data bit is 8, then:
+```bash
+[Start Bit] [8 Data Bits] [Parity Bit] [Stop Bit]
+```
+
+### 4. Parity Bit
 **Purpose**: error detection<br>
 - It's a **single extra bit** added to each byte of data
 - It helps the receiver know if the byte got corrupted during transmission
@@ -38,7 +44,7 @@ It's the speed at which two devices talk to each other, both devices **must use 
 
 **No Parity (N)**: no parity, no error check
 
-### Stop Bit
+### 5. Stop Bit
 **Purpose**: mark the end of a byte<br>
 - It’s a bit (or two) sent after the data byte to signal that the byte is finished
 - It tells the receiver: “You can start reading the next byte now”
