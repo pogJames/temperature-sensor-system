@@ -26,8 +26,8 @@ It's the speed at which two devices talk to each other, both devices **must use 
 
 ### Parity Bit
 **Purpose**: error detection<br>
-It's a **single extra bit** added to each byte of data<br>
-It helps the receiver know if the byte got corrupted during transmission<br>
+- It's a **single extra bit** added to each byte of data
+- It helps the receiver know if the byte got corrupted during transmission
 > like a **checksum or “spell check”** in your message — it tells the receiver
 
 **Even Parity (E)**: the total number of `1`s in the binary message + parity bit = even
